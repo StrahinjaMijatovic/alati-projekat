@@ -61,6 +61,7 @@ func main() {
 	router.HandleFunc("/group/{id}/{version}/{new}/{labels}/", server.delConfigsByLabel).Methods("DELETE")
 
 	router.HandleFunc("/swagger.yaml", server.swaggerHandler).Methods("GET")
+	router.Path("/metrics").Handler(metricsHandler())
 
 	// SwaggerUI
 	optionsDevelopers := middleware.SwaggerUIOpts{SpecURL: "swagger.yaml"}
