@@ -2,25 +2,42 @@
 --DODAVANJE Konfiguracije
 
 {
+  "id": "123456",
+  "version": "1.0",
   "entries": {
     "key1": "value1",
     "key2": "value2"
   }
 }
-
 --DODAVNJE KONFI-GRUPE
 
 {
-  "name": "my-config-group",
-  "configs": [
-    {
-      "name": "config-1",
-      "value": "value-1"
+  "id": "1",
+  "version": "1.0",
+  "configs": {
+    "config1": {
+      "id": "config1",
+      "labels": {
+        "label1": "value1",
+        "label2": "value2"
+      },
+      "entries": {
+        "entry1": "value1",
+        "entry2": "value2"
+      }
     },
-    {
-      "name": "config-2",
-      "value": "value-2"
+    "config2": {
+      "id": "config2",
+      "labels": {
+        "label3": "value3",
+        "label4": "value4"
+      },
+      "entries": {
+        "entry3": "value3",
+        "entry4": "value4"
+      }
     }
-  ]
+  }
 }
+
 
